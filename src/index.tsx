@@ -17,6 +17,8 @@ const WebviewAndroidCacheClear = NativeModules.WebviewAndroidCacheClear
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return WebviewAndroidCacheClear.multiply(a, b);
-}
+// export function multiply(a: number, b: number): Promise<number> {
+//   return WebviewAndroidCacheClear.multiply(a, b);
+// }
+
+export default WebviewAndroidCacheClear; // or you can export functions if needed

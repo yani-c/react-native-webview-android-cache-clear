@@ -1,5 +1,6 @@
 package com.webviewandroidcacheclear
 
+import android.webkit.WebView
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
@@ -15,8 +16,14 @@ class WebviewAndroidCacheClearModule(reactContext: ReactApplicationContext) :
   // Example method
   // See https://reactnative.dev/docs/native-modules-android
   @ReactMethod
-  fun multiply(a: Double, b: Double, promise: Promise) {
-    promise.resolve(a * b)
+  fun clearCache(promise: Promise) {
+    try {
+      // Clear the cache of the WebView
+      WebView(getReactApplicationContext()).clearCache(true)
+      promise.resolve("Cache cleared")
+    } catch (e: Exception) {
+      promise.reject("CACHE_CLEAR_ERROR", "Failed to clear cache", e)
+    }
   }
 
   companion object {

@@ -1,13 +1,22 @@
 import { useState, useEffect } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-webview-android-cache-clear';
+import ReactNativeWebviewAndroidCacheClear from 'react-native-webview-android-cache-clear';
 
 export default function App() {
-  const [result, setResult] = useState<number | undefined>();
+  const [result] = useState();
+
+  const test = async () => {
+    try {
+      const res = await ReactNativeWebviewAndroidCacheClear.clearCache();
+      console.log('sucess!!!', res); // Handle the success response
+    } catch (error) {
+      console.error('Error clearing cache:', error); // Handle the error
+    }
+  };
 
   useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
+    test();
+  }, []); // Pass an empty array to run only once on mount
 
   return (
     <View style={styles.container}>
