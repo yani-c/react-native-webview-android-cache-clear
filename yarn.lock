@@ -1380,7 +1380,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@npm:^7.20.0, @babel/preset-env@npm:^7.25.2":
+"@babel/preset-env@npm:^7.25.2":
   version: 7.25.9
   resolution: "@babel/preset-env@npm:7.25.9"
   dependencies:
@@ -1530,7 +1530,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.20.0, @babel/runtime@npm:^7.25.0, @babel/runtime@npm:^7.8.4":
+"@babel/runtime@npm:^7.25.0, @babel/runtime@npm:^7.8.4":
   version: 7.25.9
   resolution: "@babel/runtime@npm:7.25.9"
   dependencies:
@@ -2854,29 +2854,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native/metro-config@npm:0.75.4":
-  version: 0.75.4
-  resolution: "@react-native/metro-config@npm:0.75.4"
-  dependencies:
-    "@react-native/js-polyfills": 0.75.4
-    "@react-native/metro-babel-transformer": 0.75.4
-    metro-config: ^0.80.3
-    metro-runtime: ^0.80.3
-  checksum: 49608519e45396e1c6e5301dfa7af598f3309a1b7b7be4ac1e13a27de4a4ed09c9ca3d29abf0c5f9f391ebc7aa5ee13fb1f2bed00ba063d82b1b5ca27011d029
-  languageName: node
-  linkType: hard
-
 "@react-native/normalize-colors@npm:0.75.4":
   version: 0.75.4
   resolution: "@react-native/normalize-colors@npm:0.75.4"
   checksum: d6f916b20b2ba3959e07e107c2bfb175ec3530cf0e611da962ba66a65f2675864881c7c10d5ee6b51cb957cd1a35f7303b4d34a25fde590aa29618f37432447e
-  languageName: node
-  linkType: hard
-
-"@react-native/typescript-config@npm:0.75.4":
-  version: 0.75.4
-  resolution: "@react-native/typescript-config@npm:0.75.4"
-  checksum: 0c4bdffffbe990671c9e878683c1ac809bf205e35a4185e9ec77a82ecfbd4c8defdd08e5c1741e8d2b460cd29daaea8333f98090fcd01d57f2ec993122a71e98
   languageName: node
   linkType: hard
 
@@ -10725,22 +10706,6 @@ __metadata:
   checksum: 880ba5c9cf45f20dc5d7423a82b6963bb61d3fa41096b1d7ac2c7a141dfaedd5386ae6d29f80861922911220b8d0d689c831e01d9c8aca06afbb53933fa0f8b5
   languageName: node
   linkType: hard
-
-"react-native-webview-android-cache-clear-example@workspace:example":
-  version: 0.0.0-use.local
-  resolution: "react-native-webview-android-cache-clear-example@workspace:example"
-  dependencies:
-    "@babel/core": ^7.20.0
-    "@babel/preset-env": ^7.20.0
-    "@babel/runtime": ^7.20.0
-    "@react-native/babel-preset": 0.75.4
-    "@react-native/metro-config": 0.75.4
-    "@react-native/typescript-config": 0.75.4
-    react: 18.3.1
-    react-native: 0.75.4
-    react-native-builder-bob: ^0.30.2
-  languageName: unknown
-  linkType: soft
 
 "react-native-webview-android-cache-clear@workspace:.":
   version: 0.0.0-use.local
