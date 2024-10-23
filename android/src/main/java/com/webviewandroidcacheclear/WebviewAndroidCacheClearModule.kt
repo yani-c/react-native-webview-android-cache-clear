@@ -1,46 +1,39 @@
 package com.webviewandroidcacheclear
 
-import android.webkit.WebView
+import android.webkit.CookieManager
+import android.webkit.WebStorage
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.Promise
 
 class WebviewAndroidCacheClearModule(reactContext: ReactApplicationContext) :
-  ReactContextBaseJavaModule(reactContext) {
+    ReactContextBaseJavaModule(reactContext) {
 
-  private var webView: WebView? = null
+    override fun getName(): String {
+        return NAME
+    }
 
-  override fun getName(): String {
-    return NAME
-  }
+    @ReactMethod
+    fun clearCache(promise: Promise) {
+        try {
+            // Clear all WebView instances cache
+            WebStorage.getInstance().deleteAllData()
+            // Clear all the cookies
+            CookieManager.getInstance().removeAllCookies { success ->
+                if (success) {
+                    promise.resolve("Cache cleared")
+                } else {
+                    promise.reject("CACHE_CLEAR_ERROR", "Failed to clear cookies")
+                }
+            }
+            CookieManager.getInstance().flush()
+        } catch (e: Exception) {
+            promise.reject("CACHE_CLEAR_ERROR", "Failed to clear cache", e)
+        }
+    }
 
-  fun setWebView(webView: WebView) {
-    this.webView = webView
-  }
-
-  @ReactMethod
-  fun clearCache(promise: Promise) {
-      // Get the current activity from the React context
-      val currentActivity = getCurrentActivity()
-      currentActivity?.runOnUiThread {
-          try {
-              // Check that the webView is not null
-              webView?.let {
-                  it.clearCache(true) // Clear the existing WebView cache
-                  promise.resolve("Cache cleared")
-              } ?: run {
-                  promise.reject("CACHE_CLEAR_ERROR", "WebView is not initialized")
-              }
-          } catch (e: Exception) {
-              promise.reject("CACHE_CLEAR_ERROR", "Failed to clear cache", e)
-          }
-      } ?: run {
-          promise.reject("CACHE_CLEAR_ERROR", "Current activity is null")
-      }
-  }
-
-  companion object {
-    const val NAME = "WebviewAndroidCacheClear"
-  }
+    companion object {
+        const val NAME = "WebviewAndroidCacheClear"
+    }
 }
