@@ -18,9 +18,16 @@ class WebviewAndroidCacheClearModule(reactContext: ReactApplicationContext) :
   @ReactMethod
   fun clearCache(promise: Promise) {
     try {
-      // Clear the cache of the WebView
-      WebView(getReactApplicationContext()).clearCache(true)
-      promise.resolve("Cache cleared")
+      // Run the cache clearing on the UI thread
+      getReactApplicationContext().runOnUiThread {
+        try {
+          // Clear the cache of the WebView
+          WebView(getReactApplicationContext()).clearCache(true)
+          promise.resolve("Cache cleared")
+        } catch (e: Exception) {
+          promise.reject("CACHE_CLEAR_ERROR", "Failed to clear cache", e)
+        }
+      }
     } catch (e: Exception) {
       promise.reject("CACHE_CLEAR_ERROR", "Failed to clear cache", e)
     }
