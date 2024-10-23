@@ -11,7 +11,7 @@
     "jsx": "react-jsx",
     "lib": ["ESNext"],
     "module": "ESNext",
-    "moduleResolution": "Bundler",
+    "moduleResolution": "Node16",
     "noEmit": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
@@ -24,6 +24,7 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "ESNext",
-    "verbatimModuleSyntax": true
+    "verbatimModuleSyntax": true,
+    "noImplicitAny": false
   }
 }
