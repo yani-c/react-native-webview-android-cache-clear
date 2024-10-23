@@ -9,27 +9,30 @@ import com.facebook.react.bridge.Promise
 class WebviewAndroidCacheClearModule(reactContext: ReactApplicationContext) :
   ReactContextBaseJavaModule(reactContext) {
 
+  private var webView: WebView? = null
+
   override fun getName(): String {
     return NAME
   }
 
-  // Example method
-  // See https://reactnative.dev/docs/native-modules-android
+  fun setWebView(webView: WebView) {
+    this.webView = webView
+  }
+
   @ReactMethod
   fun clearCache(promise: Promise) {
-    try {
-      // Run the cache clearing on the UI thread
-      getReactApplicationContext().runOnUiThread {
-        try {
-          // Clear the cache of the WebView
-          WebView(getReactApplicationContext()).clearCache(true)
+    getReactApplicationContext().runOnUiThread {
+      try {
+        // Verifica que el webView no sea nulo
+        webView?.let {
+          it.clearCache(true) // Limpia la caché del WebView existente
           promise.resolve("Cache cleared")
-        } catch (e: Exception) {
-          promise.reject("CACHE_CLEAR_ERROR", "Failed to clear cache", e)
+        } ?: run {
+          promise.reject("CACHE_CLEAR_ERROR", "WebView is not initialized")
         }
+      } catch (e: Exception) {
+        promise.reject("CACHE_CLEAR_ERROR", "Failed to clear cache", e)
       }
-    } catch (e: Exception) {
-      promise.reject("CACHE_CLEAR_ERROR", "Failed to clear cache", e)
     }
   }
 
