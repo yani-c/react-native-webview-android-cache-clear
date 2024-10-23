@@ -21,19 +21,23 @@ class WebviewAndroidCacheClearModule(reactContext: ReactApplicationContext) :
 
   @ReactMethod
   fun clearCache(promise: Promise) {
-    getReactApplicationContext().runOnUiThread {
-      try {
-        // Verifica que el webView no sea nulo
-        webView?.let {
-          it.clearCache(true) // Limpia la caché del WebView existente
-          promise.resolve("Cache cleared")
-        } ?: run {
-          promise.reject("CACHE_CLEAR_ERROR", "WebView is not initialized")
-        }
-      } catch (e: Exception) {
-        promise.reject("CACHE_CLEAR_ERROR", "Failed to clear cache", e)
+      // Get the current activity from the React context
+      val currentActivity = getCurrentActivity()
+      currentActivity?.runOnUiThread {
+          try {
+              // Check that the webView is not null
+              webView?.let {
+                  it.clearCache(true) // Clear the existing WebView cache
+                  promise.resolve("Cache cleared")
+              } ?: run {
+                  promise.reject("CACHE_CLEAR_ERROR", "WebView is not initialized")
+              }
+          } catch (e: Exception) {
+              promise.reject("CACHE_CLEAR_ERROR", "Failed to clear cache", e)
+          }
+      } ?: run {
+          promise.reject("CACHE_CLEAR_ERROR", "Current activity is null")
       }
-    }
   }
 
   companion object {
