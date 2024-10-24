@@ -5,7 +5,7 @@ import WebView from 'react-native-webview';
 
 export default function App() {
   const [result, setResult] = useState();
-  const webviewRef = useRef(null); // Create a ref for the WebView
+  const webviewRef = useRef<WebView | null>(null); // Create a ref for the WebView
 
   const test = async () => {
     try {
@@ -35,6 +35,7 @@ export default function App() {
         source={{ uri: 'https://stage-dashboard.powerme.health' }}
         originWhitelist={['*']}
         containerStyle={styles.webview}
+        ref={webviewRef}
       />
     </View>
   );
