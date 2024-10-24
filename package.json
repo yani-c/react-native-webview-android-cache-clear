@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "clear webview cache on android",
   "source": "./src/index.tsx",
-  "main": "./lib/commonjs/index.js",
+  "main": "./src/index.tsx",
   "module": "./lib/module/index.js",
   "exports": {
     ".": {
