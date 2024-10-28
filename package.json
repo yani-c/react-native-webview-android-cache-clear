@@ -181,5 +181,8 @@
     "type": "module-legacy",
     "languages": "kotlin-swift",
     "version": "0.42.0"
+  },
+  "dependencies": {
+    "react-native-webview-ios-cache-clear": "^1.0.0"
   }
 }

@@ -1,4 +1,5 @@
 import { NativeModules, Platform } from 'react-native';
+import { clearWebViewIOSCache } from 'react-native-webview-ios-cache-clear';
 
 const LINKING_ERROR =
   `The package 'react-native-webview-android-cache-clear' doesn't seem to be linked. Make sure: \n\n` +
@@ -17,8 +18,15 @@ const WebviewAndroidCacheClear = NativeModules.WebviewAndroidCacheClear
       }
     );
 
-// export function multiply(a: number, b: number): Promise<number> {
-//   return WebviewAndroidCacheClear.multiply(a, b);
-// }
+// Function to clear cache based on the platform
+const clearWebViewCache = async () => {
+  if (Platform.OS === 'ios') {
+    return clearWebViewIOSCache();
+  } else if (Platform.OS === 'android') {
+    return WebviewAndroidCacheClear.clearCache();
+  } else {
+    throw new Error('Unsupported platform');
+  }
+};
 
-export default WebviewAndroidCacheClear; // or you can export functions if needed
+export default clearWebViewCache;

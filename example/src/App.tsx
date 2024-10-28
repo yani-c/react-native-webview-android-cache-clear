@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { StyleSheet, View, Text, Button } from 'react-native';
-import ReactNativeWebviewAndroidCacheClear from 'react-native-webview-android-cache-clear';
+import clearWebViewCache from 'react-native-webview-android-cache-clear';
 import WebView from 'react-native-webview';
 
 export default function App() {
@@ -9,7 +9,7 @@ export default function App() {
 
   const test = async () => {
     try {
-      const res = await ReactNativeWebviewAndroidCacheClear.clearCache();
+      const res = await clearWebViewCache();
       console.log('sucess!!!', res); // Handle the success response
       setResult(res);
     } catch (error) {
@@ -32,7 +32,7 @@ export default function App() {
       </View>
       <WebView
         startInLoadingState
-        source={{ uri: 'https://stage-dashboard.powerme.health' }}
+        source={{ uri: 'http://stage-dashboard.powerme.health' }}
         originWhitelist={['*']}
         containerStyle={styles.webview}
         ref={webviewRef}
