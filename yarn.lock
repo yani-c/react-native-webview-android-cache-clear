@@ -10881,7 +10881,6 @@ __metadata:
     react-native: 0.75.4
     react-native-builder-bob: ^0.30.2
     react-native-webview: 13.6.4
-    react-native-webview-ios-cache-clear: ^1.0.0
   languageName: unknown
   linkType: soft
 
@@ -10905,7 +10904,6 @@ __metadata:
     react: 18.3.1
     react-native: 0.75.4
     react-native-builder-bob: ^0.30.2
-    react-native-webview-ios-cache-clear: ^1.0.0
     release-it: ^15.0.0
     turbo: ^1.10.7
     typescript: ^5.2.2
@@ -10914,16 +10912,6 @@ __metadata:
     react-native: "*"
   languageName: unknown
   linkType: soft
-
-"react-native-webview-ios-cache-clear@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "react-native-webview-ios-cache-clear@npm:1.0.0"
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-  checksum: acf0271457d02c76e612eee279fd419e108b516f78676e9bb4958b728a7bd937395078e563b29eb4fb31635afc0fca874ff6f6403ede31bd2ed827cd9aea9217
-  languageName: node
-  linkType: hard
 
 "react-native-webview@npm:13.6.4":
   version: 13.6.4

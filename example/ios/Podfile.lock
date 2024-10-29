@@ -1279,8 +1279,6 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - react-native-webview-ios-cache-clear (1.0.0):
-    - React-Core
   - React-nativeconfig (0.75.4)
   - React-NativeModulesApple (0.75.4):
     - glog
@@ -1584,7 +1582,6 @@ DEPENDENCIES:
   - React-microtasksnativemodule (from `../node_modules/react-native/ReactCommon/react/nativemodule/microtasks`)
   - react-native-webview (from `../node_modules/react-native-webview`)
   - react-native-webview-clear-cache (from `../..`)
-  - react-native-webview-ios-cache-clear (from `../node_modules/react-native-webview-ios-cache-clear`)
   - React-nativeconfig (from `../node_modules/react-native/ReactCommon`)
   - React-NativeModulesApple (from `../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
@@ -1693,8 +1690,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-webview"
   react-native-webview-clear-cache:
     :path: "../.."
-  react-native-webview-ios-cache-clear:
-    :path: "../node_modules/react-native-webview-ios-cache-clear"
   React-nativeconfig:
     :path: "../node_modules/react-native/ReactCommon"
   React-NativeModulesApple:
@@ -1788,7 +1783,6 @@ SPEC CHECKSUMS:
   React-microtasksnativemodule: 2b73e68f0462f3175f98782db08896f8501afd20
   react-native-webview: c7b3bb37540c0a93463e283ecef5816d066923c5
   react-native-webview-clear-cache: 1964fa4a34685baf08ef6b3ca3aadeebebf58e83
-  react-native-webview-ios-cache-clear: 84094587522a0c10ef112ec718e411de45a00bdf
   React-nativeconfig: 8c83d992b9cc7d75b5abe262069eaeea4349f794
   React-NativeModulesApple: 9f7920224a3b0c7d04d77990067ded14cee3c614
   React-perflogger: 59e1a3182dca2cee7b9f1f7aab204018d46d1914
@@ -1820,4 +1814,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 0b9f7b70f22cfa9f54aa5354d8024337c9c76f83
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.0
