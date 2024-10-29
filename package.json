@@ -1,6 +1,6 @@
 {
   "name": "react-native-webview-clear-cache",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "clear webview cache on android and ios",
   "source": "./src/index.tsx",
   "main": "./src/index.tsx",
