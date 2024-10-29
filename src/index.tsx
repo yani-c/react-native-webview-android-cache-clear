@@ -19,7 +19,7 @@ const WebviewClearCache = NativeModules.WebviewClearCache
     );
 
 // Function to clear cache based on the platform
-const clearWebViewCache = async () => {
+export const clearWebViewCache = async () => {
   if (Platform.OS === 'ios') {
     return clearWebViewIOSCache();
   } else if (Platform.OS === 'android') {
@@ -28,5 +28,3 @@ const clearWebViewCache = async () => {
     throw new Error('Unsupported platform');
   }
 };
-
-export default clearWebViewCache;

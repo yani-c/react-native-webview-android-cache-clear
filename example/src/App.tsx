@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { StyleSheet, View, Text, Button } from 'react-native';
-import clearWebViewCache from 'react-native-webview-clear-cache';
+import { clearWebViewCache } from 'react-native-webview-clear-cache';
 import WebView from 'react-native-webview';
 
 export default function App() {
