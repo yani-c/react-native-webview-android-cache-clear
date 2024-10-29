@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { StyleSheet, View, Text, Button } from 'react-native';
-import clearWebViewCache from 'react-native-webview-android-cache-clear';
+import clearWebViewCache from 'react-native-webview-clear-cache';
 import WebView from 'react-native-webview';
 
 export default function App() {
@@ -32,7 +32,7 @@ export default function App() {
       </View>
       <WebView
         startInLoadingState
-        source={{ uri: 'http://stage-dashboard.powerme.health' }}
+        source={{ uri: 'https://stage-dashboard.powerme.health' }}
         originWhitelist={['*']}
         containerStyle={styles.webview}
         ref={webviewRef}

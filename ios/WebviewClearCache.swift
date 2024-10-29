@@ -1,5 +1,5 @@
-@objc(WebviewAndroidCacheClear)
-class WebviewAndroidCacheClear: NSObject {
+@objc(WebviewClearCache)
+class WebviewClearCache: NSObject {
 
   @objc(multiply:withB:withResolver:withRejecter:)
   func multiply(a: Float, b: Float, resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) -> Void {

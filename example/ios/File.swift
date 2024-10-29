@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  WebviewAndroidCacheClearExample
+//  WebviewClearCacheExample
 //
 
 import Foundation

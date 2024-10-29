@@ -77,9 +77,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "webviewandroidcacheclear.example"
+    namespace "webviewclearcache.example"
     defaultConfig {
-        applicationId "webviewandroidcacheclear.example"
+        applicationId "webviewclearcache.example"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

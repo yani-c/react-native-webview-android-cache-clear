@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "WebviewAndroidCacheClearExample.app"
-               BlueprintName = "WebviewAndroidCacheClearExample"
-               ReferencedContainer = "container:WebviewAndroidCacheClearExample.xcodeproj">
+               BuildableName = "WebviewClearCacheExample.app"
+               BlueprintName = "WebviewClearCacheExample"
+               ReferencedContainer = "container:WebviewClearCacheExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "WebviewAndroidCacheClearExampleTests.xctest"
-               BlueprintName = "WebviewAndroidCacheClearExampleTests"
-               ReferencedContainer = "container:WebviewAndroidCacheClearExample.xcodeproj">
+               BuildableName = "WebviewClearCacheExampleTests.xctest"
+               BlueprintName = "WebviewClearCacheExampleTests"
+               ReferencedContainer = "container:WebviewClearCacheExample.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "WebviewAndroidCacheClearExample.app"
-            BlueprintName = "WebviewAndroidCacheClearExample"
-            ReferencedContainer = "container:WebviewAndroidCacheClearExample.xcodeproj">
+            BuildableName = "WebviewClearCacheExample.app"
+            BlueprintName = "WebviewClearCacheExample"
+            ReferencedContainer = "container:WebviewClearCacheExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "WebviewAndroidCacheClearExample.app"
-            BlueprintName = "WebviewAndroidCacheClearExample"
-            ReferencedContainer = "container:WebviewAndroidCacheClearExample.xcodeproj">
+            BuildableName = "WebviewClearCacheExample.app"
+            BlueprintName = "WebviewClearCacheExample"
+            ReferencedContainer = "container:WebviewClearCacheExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

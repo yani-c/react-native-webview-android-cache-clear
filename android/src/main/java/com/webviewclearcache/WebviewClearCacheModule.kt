@@ -1,4 +1,4 @@
-package com.webviewandroidcacheclear
+package com.webviewclearcache
 
 import android.webkit.WebView
 import android.webkit.CookieManager
@@ -9,7 +9,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.Promise
 
-class WebviewAndroidCacheClearModule(reactContext: ReactApplicationContext) :
+class WebviewClearCacheModule(reactContext: ReactApplicationContext) :
   ReactContextBaseJavaModule(reactContext) {
 
   private var webView: WebView? = null
@@ -44,6 +44,6 @@ class WebviewAndroidCacheClearModule(reactContext: ReactApplicationContext) :
   }
 
   companion object {
-    const val NAME = "WebviewAndroidCacheClear"
+    const val NAME = "WebviewClearCache"
   }
 }

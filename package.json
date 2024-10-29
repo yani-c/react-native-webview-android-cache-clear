@@ -1,7 +1,7 @@
 {
-  "name": "react-native-webview-android-cache-clear",
+  "name": "react-native-webview-clear-cache",
   "version": "0.1.0",
-  "description": "clear webview cache on android",
+  "description": "clear webview cache on android and ios",
   "source": "./src/index.tsx",
   "main": "./src/index.tsx",
   "module": "./src/index.tsx",
@@ -37,7 +37,7 @@
     "!**/.*"
   ],
   "scripts": {
-    "example": "yarn workspace react-native-webview-android-cache-clear-example",
+    "example": "yarn workspace react-native-webview-clear-cache-example",
     "test": "jest",
     "typecheck": "tsc",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
@@ -52,14 +52,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yani-c/react-native-webview-android-cache-clear.git"
+    "url": "git+https://github.com/yani-c/react-native-webview-clear-cache.git"
   },
   "author": "yani-c <yaniceli1d@gmail.com> (https://github.com/yani-c)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yani-c/react-native-webview-android-cache-clear/issues"
+    "url": "https://github.com/yani-c/react-native-webview-clear-cache/issues"
   },
-  "homepage": "https://github.com/yani-c/react-native-webview-android-cache-clear#readme",
+  "homepage": "https://github.com/yani-c/react-native-webview-clear-cache#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

@@ -1,22 +1,22 @@
-# react-native-webview-android-cache-clear
+# react-native-webview-clear-cache
 
 clear webview cache on android
 
 ## Installation
 
 ```sh
-npm install react-native-webview-android-cache-clear
+npm install react-native-webview-clear-cache
 ```
 
 ## Usage
 
 
 ```js
-import { multiply } from 'react-native-webview-android-cache-clear';
+import { clearCache } from 'react-native-webview-clear-cache';
 
 // ...
 
-const result = await multiply(3, 7);
+const result = await clearCache();
 ```
 
 

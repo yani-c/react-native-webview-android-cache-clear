@@ -1,4 +1,4 @@
-package com.webviewandroidcacheclear
+package com.webviewclearcache
 
 import com.facebook.react.ReactPackage
 import com.facebook.react.bridge.NativeModule
@@ -6,9 +6,9 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.uimanager.ViewManager
 
 
-class WebviewAndroidCacheClearPackage : ReactPackage {
+class WebviewClearCachePackage : ReactPackage {
   override fun createNativeModules(reactContext: ReactApplicationContext): List<NativeModule> {
-    return listOf(WebviewAndroidCacheClearModule(reactContext))
+    return listOf(WebviewClearCacheModule(reactContext))
   }
 
   override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> {

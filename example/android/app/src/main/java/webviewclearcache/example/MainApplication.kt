@@ -1,4 +1,4 @@
-package webviewandroidcacheclear.example
+package webviewclearcache.example
 
 import android.app.Application
 import com.facebook.react.PackageList

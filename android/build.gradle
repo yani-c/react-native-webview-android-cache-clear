@@ -31,11 +31,11 @@ if (isNewArchitectureEnabled()) {
 }
 
 def getExtOrDefault(name) {
-  return rootProject.ext.has(name) ? rootProject.ext.get(name) : project.properties["WebviewAndroidCacheClear_" + name]
+  return rootProject.ext.has(name) ? rootProject.ext.get(name) : project.properties["WebviewClearCache_" + name]
 }
 
 def getExtOrIntegerDefault(name) {
-  return rootProject.ext.has(name) ? rootProject.ext.get(name) : (project.properties["WebviewAndroidCacheClear_" + name]).toInteger()
+  return rootProject.ext.has(name) ? rootProject.ext.get(name) : (project.properties["WebviewClearCache_" + name]).toInteger()
 }
 
 def supportsNamespace() {
@@ -49,7 +49,7 @@ def supportsNamespace() {
 
 android {
   if (supportsNamespace()) {
-    namespace "com.webviewandroidcacheclear"
+    namespace "com.webviewclearcache"
 
     sourceSets {
       main {

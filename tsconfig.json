@@ -2,7 +2,7 @@
   "compilerOptions": {
     "rootDir": ".",
     "paths": {
-      "react-native-webview-android-cache-clear": ["./src/index"]
+      "react-native-webview-clear-cache": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
