@@ -32,7 +32,7 @@ export default function App() {
       </View>
       <WebView
         startInLoadingState
-        source={{ uri: 'https://stage-dashboard.powerme.health' }}
+        source={{ uri: 'https://x.com/?lang=en' }}
         originWhitelist={['*']}
         containerStyle={styles.webview}
         ref={webviewRef}
